@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-use function Mos\Functions\url;
+use function Fian\Functions\url;
 
 ?><!doctype html>
 <html>

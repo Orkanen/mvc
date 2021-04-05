@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Mos\Router;
+namespace Fian\Router;
 
-use function Mos\Functions\{
+use function Fian\Functions\{
     destroySession,
     redirectTo,
     renderView,

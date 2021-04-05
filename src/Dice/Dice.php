@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Mos\Dice;
+namespace Fian\Dice;
 
 //use function Mos\Functions\{
 //    destroySession,

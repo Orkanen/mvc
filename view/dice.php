@@ -9,10 +9,13 @@ declare(strict_types=1);
 $header = $header ?? null;
 $message = $message ?? null;
 
-$die = new \Mos\Dice\Dice();
+use Fian\Dice\Dice;
+use Fian\Dice\DiceHand;
+
+$die = new Dice();
 $die->roll();
 
-$diceHand = new \Mos\Dice\DiceHand();
+$diceHand = new DiceHand();
 $diceHand->roll();
 
 

@@ -2,7 +2,8 @@
     "autoload": {
         "psr-4": {
             "Mos\\": "src/",
-            "Dbwebb\\": "src/"
+            "Dbwebb\\": "src/",
+            "Fian\\": "src/"
         },
         "files": [
             "src/functions.php"
