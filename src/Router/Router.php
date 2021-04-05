@@ -56,6 +56,14 @@ class Router
             $body = renderView("layout/page.php", $data);
             sendResponse($body);
             return;
+        } else if ($method === "GET" && $path === "/dice") {
+            $data = [
+                "header" => "Dice",
+                "message" => "Hey, edit this to do it youreself!",
+            ];
+            $body = renderView("layout/dice.php", $data);
+            sendResponse($body);
+            return;
         }
 
         $data = [
