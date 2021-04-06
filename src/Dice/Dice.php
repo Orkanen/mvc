@@ -18,13 +18,13 @@ namespace Fian\Dice;
  */
 class Dice
 {
-    const FACES = 6;
+    private int $faces = 6;
 
     private ?int $roll = null;
 
     public function roll(): int
     {
-        $this->roll = rand(1, self::FACES);
+        $this->roll = rand(1, $this->faces);
 
         return $this->roll;
     }
@@ -32,5 +32,23 @@ class Dice
     public function getLastRoll(): int
     {
         return $this->roll;
+    }
+
+    public function setFaces(int $face)
+    {
+        $this->faces = $face;
+    }
+
+    public function getFaces()
+    {
+        return $this->faces;
+    }
+}
+
+class DiceGraphic extends Dice
+{
+    public function graphic()
+    {
+        return "dice-" . $this->getLastRoll();
     }
 }

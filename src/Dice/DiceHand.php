@@ -20,11 +20,13 @@ class DiceHand
 {
     private array $dices;
     private int $sum;
+    private int $amount = 1;
 
-    public function __construct()
+    public function __construct(int $die=1)
     {
-        for ($i = 0; $i <= 3; $i++) {
-            $this->dices[$i] = new Dice();
+        $this->amount = $die;
+        for ($i = 0; $i <= $this->amount; $i++) {
+            $this->dices[$i] = new DiceGraphic();
         }
     }
 
@@ -33,7 +35,7 @@ class DiceHand
         $len = count($this->dices);
 
         $this->sum = 0;
-        for ($i = 0; $i <= 3; $i++) {
+        for ($i = 0; $i <= $this->amount; $i++) {
             $this->sum += $this->dices[$i]->roll();
         }
     }
@@ -41,10 +43,20 @@ class DiceHand
     public function getLastRoll(): string
     {
         $res = "";
-        for ($i = 0; $i <= 3; $i++) {
+        for ($i = 0; $i <= $this->amount; $i++) {
             $res .= $this->dices[$i]->getLastRoll() . ", ";
         }
 
         return $res . " = " . $this->sum;
+    }
+
+    public function printRoll(): string
+    {
+        $res = "<p class='dice-utf8'>";
+        for ($i = 0; $i <= $this->amount; $i++) {
+            $res .= "<i class=" . $this->dices[$i]->graphic() . "></i>";
+        }
+
+        return $res . "</p>";
     }
 }
