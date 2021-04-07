@@ -30,7 +30,7 @@ class DiceHand
         }
     }
 
-    public function roll(): void
+    public function roll()
     {
         $len = count($this->dices);
 
@@ -48,6 +48,11 @@ class DiceHand
         }
 
         return $res . " = " . $this->sum;
+    }
+
+    public function getSum(): int
+    {
+        return $this->sum;
     }
 
     public function printRoll(): string

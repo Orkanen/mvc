@@ -64,6 +64,14 @@ class Router
             $body = renderView("layout/dice.php", $data);
             sendResponse($body);
             return;
+        } else if ($method === "GET" && $path === "/dice/destroy?") {
+            destroySession();
+            redirectTo(url("/dice"));
+            return;
+        } else if ($method === "POST" && $path === "/dice?") {
+            destroySession();
+            redirectTo(url("/dice"));
+            return;
         }
 
         $data = [
