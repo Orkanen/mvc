@@ -65,22 +65,3 @@ class DiceHand
         return $res . "</p>";
     }
 }
-
-class RoboHand
-{
-    private int $robSum = 0;
-    public function curRoll(int $human = 1)
-    {
-        for ($i = 0; $i <= 0; $i++) {
-            $this->dices[$i] = new DiceGraphic();
-        }
-        while ($this->robSum <= $human) {
-            $this->robSum += $this->dices[0]->roll();
-        }
-    }
-
-    public function roboSum()
-    {
-        return $this->robSum;
-    }
-}
