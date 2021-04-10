@@ -19,7 +19,7 @@ namespace Fian\Dice;
 class DiceHand
 {
     private array $dices;
-    private int $sum;
+    private int $sum = 0;
     private int $amount = 1;
 
     public function __construct(int $die=1)
@@ -63,5 +63,24 @@ class DiceHand
         }
 
         return $res . "</p>";
+    }
+}
+
+class RoboHand
+{
+    private int $robSum = 0;
+    public function curRoll(int $human = 1)
+    {
+        for ($i = 0; $i <= 0; $i++) {
+            $this->dices[$i] = new DiceGraphic();
+        }
+        while ($this->robSum <= $human) {
+            $this->robSum += $this->dices[0]->roll();
+        }
+    }
+
+    public function roboSum()
+    {
+        return $this->robSum;
     }
 }

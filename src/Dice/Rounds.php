@@ -18,48 +18,36 @@ namespace Fian\Dice;
  */
 class Rounds
 {
-    private array $winners;
-    private int $prevWin;
-    private int $playerValue;
-    private int $computerValue;
-    private $series = [];
+    private array $dices;
+    private int $sum = 0;
+    private int $amount = 0;
 
-    public function newRound()
+    public function __construct()
     {
-        $this->playerValue = 0;
-        $this->computerValue = 0;
+        $this->dices[0] = new Dice();
     }
 
-    public function game(int $dice=1)
+    public function roboRoll()
     {
-        $diceHand = new DiceHand($dice);
-        $diceHand->roll();
-        $this->playerValue = $diceHand->getSum();
-        return $diceHand->printRoll() . $this->playerValue;
+        $this->sum += $this->dices[0]->roll();
     }
 
-    public function getWinners()
+    public function curRoll(int $human=0)
     {
-        $this->winners[0] = "You";
-        $res = "";
-        for ($i = 0; $i <= count($this->winners)-1; $i++) {
-            $res = $this->winners[$i] . ", ";
-        }
-
-        return $res;
+        for($this->sum; $this->sum <= $human;)
+        {
+            if ($this->sum >= 21){
+                break;
+            } else {
+                $this->sum += $this->dices[0]->roll();
+            };
+        };
     }
 
-    public function setSeries($var)
+    public function roboSum()
     {
-        array_push($this->series, $var);
+        return $this->sum;
     }
 
-    public function getSeries()
-    {
-        $res = "";
-        for ($i = 0; $i <= count($this->series)-1; $i++) {
-            $res = $this->series[$i] . ", ";
-        }
-        return $res;
-    }
+
 }

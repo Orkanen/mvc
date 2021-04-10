@@ -7,6 +7,11 @@ namespace Fian\Functions;
 use Twig\Loader\FilesystemLoader;
 use Twig\Environment;
 
+use Fian\Dice\Dice;
+use Fian\Dice\DiceHand;
+use Fian\Dice\DiceGraphic;
+use Fian\Dice\Rounds;
+
 /**
  * Functions.
  */
@@ -208,4 +213,55 @@ function destroySession(): void
     }
 
     session_destroy();
+}
+
+function happySession($message)
+{
+  $die = new Dice();
+  $dice = new DiceGraphic();
+
+  if ($message === "dice1") {
+      $diceHand = new DiceHand(0);
+      $diceHand->roll();
+      $_SESSION["currentRoll"] = $diceHand->getSum() + ($_SESSION["currentRoll"] ?? 0);
+      $_SESSION["flashmessage"] = $diceHand->printRoll();
+      if($_SESSION["currentRoll"] == 21){
+          $_SESSION["manWin"] = 1 + ($_SESSION["manWin"] ?? 0);
+          $_SESSION["status"] = "You Won!";
+          $_SESSION["currentRoll"] = 0;
+      }elseif($_SESSION["currentRoll"] > 21){
+          $_SESSION["compWin"] = 1 + ($_SESSION["compWin"] ?? 0);
+          $_SESSION["status"] = "You Lost!";
+          $_SESSION["currentRoll"] = 0;
+      }
+  } elseif ($message === "dice2") {
+      $diceHand = new DiceHand(1);
+      $diceHand->roll();
+      $_SESSION["currentRoll"] = $diceHand->getSum() + ($_SESSION["currentRoll"] ?? 0);
+      $_SESSION["flashmessage"] = $diceHand->printRoll();
+      if($_SESSION["currentRoll"] == 21){
+          $_SESSION["manWin"] = 1 + ($_SESSION["manWin"] ?? 0);
+          $_SESSION["status"] = "You Won!";
+          $_SESSION["currentRoll"] = 0;
+      }elseif($_SESSION["currentRoll"] > 21){
+          $_SESSION["compWin"] = 1 + ($_SESSION["compWin"] ?? 0);
+          $_SESSION["status"] = "You Lost!";
+          $_SESSION["currentRoll"] = 0;
+      }
+  } elseif ($message === "stop") {
+      $roboHand = new Rounds();
+      $temp = $_SESSION["currentRoll"];
+      $roboHand->curRoll($temp);
+      if ($roboHand->roboSum() == 21) {
+          $_SESSION["status"] = "Computer Won!";
+          $_SESSION["roboSum"] = $roboHand->roboSum();
+          $_SESSION["compWin"] = 1 + ($_SESSION["compWin"] ?? 0);
+          $_SESSION["currentRoll"] = 0;
+      } elseif ($roboHand->roboSum() > 21) {
+          $_SESSION["status"] = "You Won!";
+          $_SESSION["roboSum"] = $roboHand->roboSum();          
+          $_SESSION["manWin"] = 1 + ($_SESSION["manWin"] ?? 0);
+          $_SESSION["currentRoll"] = 0;
+      }
+  }
 }

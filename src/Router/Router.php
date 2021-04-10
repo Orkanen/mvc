@@ -10,7 +10,8 @@ use function Fian\Functions\{
     renderView,
     renderTwigView,
     sendResponse,
-    url
+    url,
+    happySession
 };
 
 /**
@@ -68,8 +69,8 @@ class Router
             destroySession();
             redirectTo(url("/dice"));
             return;
-        } else if ($method === "POST" && $path === "/dice?") {
-            destroySession();
+        } else if ($method === "POST" && $path === "/dice") {
+            happySession($_POST['message']);
             redirectTo(url("/dice"));
             return;
         }

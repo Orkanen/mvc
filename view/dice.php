@@ -10,8 +10,8 @@ use function Fian\Functions\url;
 
 $url = url("/dice/destroy");
 
-var_dump($_SESSION);
-
+//var_dump($_SESSION);
+$sess = isset($_SESSION['currentRoll']) ? $_SESSION['currentRoll'] : null;
 $header = $header ?? null;
 $message = $message ?? null;
 
@@ -20,30 +20,26 @@ use Fian\Dice\DiceHand;
 use Fian\Dice\DiceGraphic;
 use Fian\Dice\Rounds;
 
-$die = new Dice();
-
-$dice = new DiceGraphic();
-$dice->roll();
-
-$diceHand = new DiceHand(1);
-
-$round = new Rounds();
-$round->setSeries(1);
-$round->setSeries(2);
+require __DIR__ . "/flashmessage.php";
 
 ?>
-<h1><?= $header ?></h1>
 
-<p><?= $message ?></p>
+<form method="post">
 
-<p>DiceHand</p>
-<form action=<?=$diceHand->roll()?> >
-    <input type="submit" value="Roll" />
+    <fieldset>
+        <legend>Game of Dice</legend>
+
+        <p><label><br>
+            <input type="radio" name="message" value="dice1" checked> Roll 1 dice<br>
+            <input type="radio" name="message" value="dice2"> Roll 2 dice <br>
+            <input type="radio" name="message" value="stop"> Hold <br>
+        </label></p>
+
+        <input type="submit" name="submit" value="Submit">
+
+    </fieldset>
+
 </form>
-<p><?= $diceHand->getLastRoll() ?></p>
-<?= $diceHand->printRoll() ?>
-
-<p><?= $_SESSION["currentRoll"] = $diceHand->getSum() + ($_SESSION["currentRoll"] ?? 0) ?></p>
 
 <form action=<?= $url; ?>>
     <input type="submit" value="Reset" />
