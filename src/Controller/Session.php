@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Mos\Controller;
+namespace Fian\Controller;
 
 use Nyholm\Psr7\Factory\Psr17Factory;
 use Nyholm\Psr7\Response;
 use Psr\Http\Message\ResponseInterface;
 
-use function Mos\Functions\{
+use function Fian\Functions\{
     destroySession,
     renderView,
     url

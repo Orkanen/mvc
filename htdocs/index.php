@@ -7,8 +7,8 @@
 declare(strict_types=1);
 
 use Laminas\HttpHandlerRunner\Emitter\SapiEmitter as Emitter;
-use function Mos\Functions\getRoutePath;
-use Mos\Controller\Error;
+use function Fian\Functions\getRoutePath;
+use Fian\Controller\Error;
 use Psr\Http\Message\ResponseInterface;
 
 /**

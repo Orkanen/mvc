@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Mos\Controller;
+namespace Fian\Controller;
 
 use Nyholm\Psr7\Factory\Psr17Factory;
 use Psr\Http\Message\ResponseInterface;
 
-use function Mos\Functions\renderView;
+use function Fian\Functions\renderView;
 
 /**
  * Controller for the index route.

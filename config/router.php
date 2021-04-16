@@ -15,15 +15,15 @@ $router->addRoute("GET", "/test", function () {
     return "Testing response";
 });
 
-$router->addRoute("GET", "/", "\Mos\Controller\Index");
-$router->addRoute("GET", "/debug", "\Mos\Controller\Debug");
-$router->addRoute("GET", "/twig", "\Mos\Controller\TwigView");
+$router->addRoute("GET", "/", "\Fian\Controller\Index");
+$router->addRoute("GET", "/debug", "\Fian\Controller\Debug");
+$router->addRoute("GET", "/twig", "\Fian\Controller\TwigView");
 
 $router->addGroup("/session", function (RouteCollector $router) {
-    $router->addRoute("GET", "", ["\Mos\Controller\Session", "index"]);
-    $router->addRoute("GET", "/destroy", ["\Mos\Controller\Session", "destroy"]);
+    $router->addRoute("GET", "", ["\Fian\Controller\Session", "index"]);
+    $router->addRoute("GET", "/destroy", ["\Fian\Controller\Session", "destroy"]);
 });
 
 $router->addGroup("/some", function (RouteCollector $router) {
-    $router->addRoute("GET", "/where", ["\Mos\Controller\Sample", "where"]);
+    $router->addRoute("GET", "/where", ["\Fian\Controller\Sample", "where"]);
 });
