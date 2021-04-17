@@ -9,7 +9,7 @@ declare(strict_types=1);
 use function Fian\Functions\url;
 
 $url = url("/dice/destroy");
-
+$url2 = url("/dice/info");
 //var_dump($_SESSION);
 $sess = isset($_SESSION['currentRoll']) ? $_SESSION['currentRoll'] : null;
 $header = $header ?? null;
@@ -21,6 +21,12 @@ use Fian\Dice\DiceGraphic;
 use Fian\Dice\Rounds;
 
 require __DIR__ . "/flashmessage.php";
+var_dump($_SESSION["object"] ?? null);
+$testing = ($_SESSION["object"] ?? null);
+if ($testing != null) {
+    $rollValue = $testing->roll();
+    var_dump($rollValue);
+}
 
 ?>
 
@@ -44,3 +50,5 @@ require __DIR__ . "/flashmessage.php";
 <form action=<?= $url; ?>>
     <input type="submit" value="Reset" />
 </form>
+
+<a href=<?= $url2; ?>> TEST </a>

@@ -259,9 +259,14 @@ function happySession($message)
           $_SESSION["currentRoll"] = 0;
       } elseif ($roboHand->roboSum() > 21) {
           $_SESSION["status"] = "You Won!";
-          $_SESSION["roboSum"] = $roboHand->roboSum();          
+          $_SESSION["roboSum"] = $roboHand->roboSum();
           $_SESSION["manWin"] = 1 + ($_SESSION["manWin"] ?? 0);
           $_SESSION["currentRoll"] = 0;
       }
   }
+}
+
+function testSession(): void
+{
+    $_SESSION["object"] = new Dice;
 }

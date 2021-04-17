@@ -27,3 +27,8 @@ $router->addGroup("/session", function (RouteCollector $router) {
 $router->addGroup("/some", function (RouteCollector $router) {
     $router->addRoute("GET", "/where", ["\Fian\Controller\Sample", "where"]);
 });
+
+$router->addGroup("/dice", function (RouteCollector $router) {
+    $router->addRoute("GET", "", ["\Fian\Controller\DiceView", "index"]);
+    $router->addRoute("GET", "/info", ["\Fian\Controller\DiceView", "info"]);
+});
