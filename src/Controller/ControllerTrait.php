@@ -16,9 +16,8 @@ trait ControllerTrait
 {
     public function response(
         string $body,
-        int $status=200
-    ): ResponseInterface
-    {
+        int $status = 200
+    ): ResponseInterface {
         $psr17Factory = new Psr17Factory();
 
         return $psr17Factory
@@ -28,9 +27,8 @@ trait ControllerTrait
 
     public function redirect(
         string $url,
-        int $status=301
-    ): ResponseInterface
-    {
+        int $status = 301
+    ): ResponseInterface {
         $psr17Factory = new Psr17Factory();
 
         return $psr17Factory

@@ -9,7 +9,6 @@ use Nyholm\Psr7\Response;
 use Psr\Http\Message\ResponseInterface;
 
 use function Fian\Functions\renderTwigView;
-
 use function Fian\Functions\{
     destroySession,
     renderView,
@@ -17,9 +16,7 @@ use function Fian\Functions\{
     getRoutePath,
     happySession
 };
-/**
- * Controller for showing how Twig views works.
- */
+
 class DiceView
 {
     public function index(): ResponseInterface

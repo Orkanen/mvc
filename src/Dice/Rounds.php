@@ -20,7 +20,7 @@ class Rounds
 {
     private array $dices;
     private int $sum = 0;
-    private int $amount = 0;
+    //private int $amount = 0;
     private int $roundsDone = 0;
 
     public function __construct()
@@ -33,15 +33,13 @@ class Rounds
         $this->sum += $this->dices[0]->roll();
     }
 
-    public function curRoll(int $human=0)
+    public function curRoll(int $human = 0)
     {
-        for($this->sum; $this->sum <= $human;)
-        {
-            if ($this->sum >= 21){
+        for ($this->sum; $this->sum <= $human;) {
+            if ($this->sum >= 21) {
                 break;
-            } else {
-                $this->sum += $this->dices[0]->roll();
-            };
+            }
+            $this->sum += $this->dices[0]->roll();
         };
     }
 
@@ -50,7 +48,7 @@ class Rounds
         return $this->sum;
     }
 
-    public function addRound(int $adding=0)
+    public function addRound(int $adding = 0)
     {
         $this->roundsDone += $adding;
     }
@@ -59,6 +57,4 @@ class Rounds
     {
         return $this->roundsDone;
     }
-
-
 }

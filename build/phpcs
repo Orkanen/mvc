@@ -1,0 +1,10 @@
+
+FILE: C:\Users\Orkanen\dbwebb-kurser\mvc\me\game\src\Dice\Dice.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 48 | ERROR | Each class must be in a file by itself
+----------------------------------------------------------------------
+
+Time: 521ms; Memory: 8MB
+

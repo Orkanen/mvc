@@ -1,9 +1,5 @@
 <?php
-/**
- * Generate a flashmessage on one page load , based on information in the
- * session, then remove the information from the session.
- */
-//$status = "";
+
 $message = $_SESSION["flashmessage"] ?? null;
 $curRoll = $_SESSION["currentRoll"] ?? null;
 $status = $_SESSION["status"] ?? null;

@@ -22,7 +22,7 @@ class DiceHand
     private int $sum = 0;
     private int $amount = 1;
 
-    public function __construct(int $die=1)
+    public function __construct(int $die = 1)
     {
         $this->amount = $die;
         for ($i = 0; $i <= $this->amount; $i++) {
@@ -32,7 +32,7 @@ class DiceHand
 
     public function roll()
     {
-        $len = count($this->dices);
+        //$len = count($this->dices);
 
         $this->sum = 0;
         for ($i = 0; $i <= $this->amount; $i++) {
