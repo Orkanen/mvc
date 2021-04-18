@@ -30,25 +30,25 @@ if ($testing != null) {
 
 ?>
 
-<form method="post">
+<form action="<?= $url2; ?>" method="post">
 
     <fieldset>
         <legend>Game of Dice</legend>
 
         <p><label><br>
-            <input type="radio" name="message" value="dice1" checked> Roll 1 dice<br>
-            <input type="radio" name="message" value="dice2"> Roll 2 dice <br>
-            <input type="radio" name="message" value="stop"> Hold <br>
+            <input type="radio" name="amount" value="dice1" checked> Roll 1 dice<br>
+            <input type="radio" name="amount" value="dice2"> Roll 2 dice <br>
+            <input type="radio" name="amount" value="stop"> Hold <br>
         </label></p>
 
-        <input type="submit" name="submit" value="Submit">
+        <input type="submit" name="submit">
 
     </fieldset>
 
 </form>
 
 <form action=<?= $url; ?>>
-    <input type="submit" value="Reset" />
+    <input type="submit" name="reset" />
 </form>
 
 <a href=<?= $url2; ?>> TEST </a>

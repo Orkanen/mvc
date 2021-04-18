@@ -15,7 +15,8 @@ use function Fian\Functions\{
     renderView,
     url,
     getRoutePath,
-    testSession
+    happySession,
+    yatzy
 };
 /**
  * Controller for showing how Twig views works.
@@ -34,8 +35,9 @@ class DiceView
     }
     public function info(): ResponseInterface
     {
-        testSession();
-
+        $_SESSION["amount"] = $_POST["amount"] ?? null;
+        happySession($_SESSION["amount"]);
+        yatzy();
 
         return (new Response())
             ->withStatus(301)

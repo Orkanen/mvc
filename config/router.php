@@ -30,5 +30,11 @@ $router->addGroup("/some", function (RouteCollector $router) {
 
 $router->addGroup("/dice", function (RouteCollector $router) {
     $router->addRoute("GET", "", ["\Fian\Controller\DiceView", "index"]);
+    $router->addRoute("POST", "/info", ["\Fian\Controller\DiceView", "info"]);
     $router->addRoute("GET", "/info", ["\Fian\Controller\DiceView", "info"]);
+});
+
+$router->addGroup("/yatzy", function (RouteCollector $router) {
+    $router->addRoute("GET", "", ["\Fian\Controller\YatzyView", "index"]);
+    $router->addRoute("GET", "/roll", ["\Fian\Controller\YatzyView", "info"]);
 });

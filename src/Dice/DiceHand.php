@@ -40,6 +40,15 @@ class DiceHand
         }
     }
 
+    public function getDice(array $options)
+    {
+        for ($i = 0; $i < count($options);) {
+            $temp = $options[$i];
+            $this->dices[$temp]->roll();
+            $i += 1;
+        }
+    }
+
     public function getLastRoll(): string
     {
         $res = "";

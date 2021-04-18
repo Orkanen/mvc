@@ -1,0 +1,8 @@
+C:\Users\Orkanen\dbwebb-kurser\mvc\me\game\src\Controller\Debug.php:24	Avoid using static access to class '\Nyholm\Psr7\Stream' in method '__invoke'.
+C:\Users\Orkanen\dbwebb-kurser\mvc\me\game\src\Dice\DiceHand.php:35	Avoid unused local variables such as '$len'.
+C:\Users\Orkanen\dbwebb-kurser\mvc\me\game\src\Dice\Rounds.php:23	Avoid unused private fields such as '$amount'.
+C:\Users\Orkanen\dbwebb-kurser\mvc\me\game\src\Dice\Rounds.php:41	The method curRoll uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+C:\Users\Orkanen\dbwebb-kurser\mvc\me\game\src\Router\Router.php:22	The method dispatch() has a Cyclomatic Complexity of 19. The configured cyclomatic complexity threshold is 10.
+C:\Users\Orkanen\dbwebb-kurser\mvc\me\game\src\functions.php:218	The function happySession() has a Cyclomatic Complexity of 10. The configured cyclomatic complexity threshold is 10.
+C:\Users\Orkanen\dbwebb-kurser\mvc\me\game\src\functions.php:220	Avoid unused local variables such as '$die'.
+C:\Users\Orkanen\dbwebb-kurser\mvc\me\game\src\functions.php:221	Avoid unused local variables such as '$dice'.

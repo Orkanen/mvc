@@ -270,3 +270,22 @@ function testSession(): void
 {
     $_SESSION["object"] = new Dice;
 }
+
+function yatzy($givenOption = "none"): void
+{
+    $die = new Dice();
+    $dice = new DiceGraphic();
+    $rounds = new Rounds();
+    $diceHand = new DiceHand(4);
+    if ($givenOption == "roll") {
+        $diceHand->roll();
+        $_SESSION["testing"] = $diceHand->printRoll();
+        $rounds->addRound(1);
+    } else {
+        $diceHand->roll();
+        $_SESSION["testing"] = $diceHand->printRoll();
+        $ary = [2, 4];
+        $diceHand->getDice($ary);
+        $_SESSION["testing2"] = $diceHand->printRoll();
+    }
+}
