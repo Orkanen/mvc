@@ -8,6 +8,11 @@ namespace Fian\Controller;
 //use Nyholm\Psr7\Response;
 use Psr\Http\Message\ResponseInterface;
 
+use Fian\Dice\Dice;
+use Fian\Dice\DiceHand;
+use Fian\Dice\DiceGraphic;
+use Fian\Dice\Rounds;
+
 use function Fian\Functions\renderTwigView;
 
 use function Fian\Functions\{
@@ -15,8 +20,9 @@ use function Fian\Functions\{
     renderView,
     url,
     getRoutePath,
-    happySession,
-    yatzy
+    objectCreator,
+    yatzy,
+    gameOver
 };
 /**
  * Controller for showing how Twig views works.
@@ -27,10 +33,11 @@ use function Fian\Functions\{
 
      public function index(): ResponseInterface
      {
-
+        $url = url("/yatzy/firstRoll");
         $data = [
             "header" => "Yatzy page",
             "message" => "YATZY!.",
+            "rollDice" => "<a href=$url>Roll</a>"
         ];
 
         $body = renderView("layout/yatzy.php", $data);
@@ -38,18 +45,86 @@ use function Fian\Functions\{
         return $this->response($body);
 
     }
-    public function info(): ResponseInterface
+
+    public function firstRoll(): ResponseInterface
     {
 
-        yatzy();
+        $_SESSION["gameCounter"] = 1;
+        objectCreator();
+        //$objectHold = $_SESSION['diceHand'];
+        //$_SESSION["diceHand"] = $diceHand;
+        $tempHolder = "roll";
+        $roundValues = yatzy($tempHolder);
+
+        $form = "<input type='checkbox' name='amount1' value='0'> Roll Dice 1<br>
+                <input type='checkbox' name='amount2' value='1'> Roll Dice 2<br>
+                <input type='checkbox' name='amount3' value='2'> Roll Dice 3<br>
+                <input type='checkbox' name='amount4' value='3'> Roll Dice 4<br>
+                <input type='checkbox' name='amount5' value='4'> Roll Dice 5<br>
+                <input type='submit' name='submit' value='Roll'/>";
+
+        $url = url("/yatzy/roll");
 
         $data = [
             "header" => "Yatzy page",
             "message" => "A ROLL WAS MADE",
+            "dice" => $_SESSION["testing"],
+            "form" => $form,
+            "url" => $url
         ];
 
         $body = renderView("layout/yatzy.php", $data);
+        //return $this->redirect(url("/yatzy"));
+        return $this->response($body);
+    }
 
+    public function reRoll(): ResponseInterface
+    {
+        if ($_SESSION["gameCounter"] < 3) {
+            $_SESSION["gameCounter"] += 1;
+            $dice1 = $_POST["amount1"] ?? null;
+            $dice2 = $_POST["amount2"] ?? null;
+            $dice3 = $_POST["amount3"] ?? null;
+            $dice4 = $_POST["amount4"] ?? null;
+            $dice5 = $_POST["amount5"] ?? null;
+            $reRollDice = [$dice1, $dice2, $dice3, $dice4, $dice5];
+
+            //echo json_encode($reRollDice);
+            $tempHolder = "none";
+            //$diceHand = null;
+            yatzy($tempHolder, $reRollDice);
+            $url = url("/yatzy/roll");
+            $form = "<input type='checkbox' name='amount1' value='0'> Roll Dice 1<br>
+                    <input type='checkbox' name='amount2' value='1'> Roll Dice 2<br>
+                    <input type='checkbox' name='amount3' value='2'> Roll Dice 3<br>
+                    <input type='checkbox' name='amount4' value='3'> Roll Dice 4<br>
+                    <input type='checkbox' name='amount5' value='4'> Roll Dice 5<br>
+                    <input type='submit' name='submit' value='Roll'>";
+
+            $data = [
+                "header" => "Yatzy page",
+                "message" => "Re-rolled",
+                "dice" => $_SESSION["testing2"],
+                "form" => $form,
+                "url" => $url
+            ];
+        } else {
+            $url = url("/yatzy");
+            $gameOver = gameOver();
+            $_SESSION['die'] = null;
+            $_SESSION['dice'] = null;
+            $_SESSION['diceHand'] = null;
+            $data = [
+                "header" => "Yatzy page",
+                "message" => "Game Over",
+                "dice" => $gameOver,
+                "form" => null,
+                "url" => $url
+            ];
+        }
+
+
+        $body = renderView("layout/yatzy.php", $data);
         return $this->response($body);
     }
 }

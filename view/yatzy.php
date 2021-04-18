@@ -10,9 +10,23 @@ use function Fian\Functions\url;
 
 $header = $header ?? null;
 $message = $message ?? null;
-$url = url("/yatzy/roll");
+//$url = url("/yatzy/firstRoll");
 ?><h1><?= $header ?></h1>
 
 <p><?= $message ?></p>
 
-<a href="<?= $url ?>">Roll</a>
+<?= $rollDice = $rollDice ?? null; ?>
+
+<form action="<?= $url; ?>" method="post">
+
+    <fieldset>
+        <legend>Game of Dice</legend>
+        <?= $dice = $dice ?? null; ?>
+        <p><label><br>
+
+            <?= $form = $form ?? null; ?>
+        </label></p>
+
+    </fieldset>
+
+</form>

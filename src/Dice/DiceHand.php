@@ -12,13 +12,13 @@ namespace Fian\Dice;
 //    sendResponse,
 //    url
 //};
-
+//use Fian\Dice\DiceGraphic;
 /**
  * Class Dice.
  */
 class DiceHand
 {
-    private array $dices;
+    public array $dices;
     private int $sum = 0;
     private int $amount = 1;
 
@@ -42,9 +42,14 @@ class DiceHand
 
     public function getDice(array $options)
     {
-        for ($i = 0; $i < count($options);) {
+        //echo(json_encode($options));
+        for ($i = 0; $i < 5;) {
             $temp = $options[$i];
-            $this->dices[$temp]->roll();
+            //echo($temp);
+            if ($temp != null) {
+                //echo($this->dices[$temp]);
+                $this->dices[$temp]->roll();
+            }
             $i += 1;
         }
     }
@@ -62,6 +67,15 @@ class DiceHand
     public function getSum(): int
     {
         return $this->sum;
+    }
+
+    public function getDiceHand(): string
+    {
+        $res = "";
+        for ($i = 0; $i <= $this->amount; $i++) {
+            $res .= $this->dices[$i] . ", ";
+        }
+        return $res;
     }
 
     public function printRoll(): string

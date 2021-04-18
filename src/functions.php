@@ -266,26 +266,54 @@ function happySession($message)
   }
 }
 
-function testSession(): void
-{
-    $_SESSION["object"] = new Dice;
-}
-
-function yatzy($givenOption = "none"): void
+function objectCreator()
 {
     $die = new Dice();
     $dice = new DiceGraphic();
-    $rounds = new Rounds();
+    //$rounds = new Rounds();
     $diceHand = new DiceHand(4);
+    $_SESSION['diceHand'] = serialize($diceHand);
+    $_SESSION['die'] = serialize($die);
+    $_SESSION['dice'] = serialize($dice);
+}
+
+function yatzy($givenOption = "none", $reRollDice = null): void
+{
+    $gDie = unserialize($_SESSION['die']);
+    $gDice = unserialize($_SESSION['dice']);
+    $diceHand = unserialize($_SESSION['diceHand']);
+    $counter = 0;
+/*
+    for ($i = 1; $i < 6; $i++) {
+        if ($reRollDice[$i] == null) {
+            $counter + 1;
+        }
+    }
+    if ($counter == null) {
+        $givenOption == "roll";
+    }*/
     if ($givenOption == "roll") {
         $diceHand->roll();
+        //echo json_encode($diceHand->dices);
         $_SESSION["testing"] = $diceHand->printRoll();
-        $rounds->addRound(1);
     } else {
-        $diceHand->roll();
-        $_SESSION["testing"] = $diceHand->printRoll();
-        $ary = [2, 4];
-        $diceHand->getDice($ary);
+
+        //echo ($diceHand->getDice([null, 2, null, 4, null]));
+        //$diceHand->roll();
+        $diceHand->getDice($reRollDice);
         $_SESSION["testing2"] = $diceHand->printRoll();
     }
+
+    $_SESSION["diceHand"] = serialize($diceHand);
+    $_SESSION["dice"] = serialize($gDice);
+    $_SESSION["die"] = serialize($gDie);
+}
+
+function gameOver()
+{
+    $gDie = unserialize($_SESSION['die']);
+    $gDice = unserialize($_SESSION['dice']);
+    $diceHand = unserialize($_SESSION['diceHand']);
+    $sum = $diceHand->getSum();
+    return $sum;
 }
