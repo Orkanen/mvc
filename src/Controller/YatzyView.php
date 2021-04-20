@@ -28,11 +28,28 @@ class YatzyView
     public function index(): ResponseInterface
     {
         $url = url("/yatzy/firstRoll");
-        $data = [
-            "header" => "Yatzy page",
-            "message" => "YATZY!.",
-            "rollDice" => "<a href=$url>Roll</a>"
-        ];
+        if (isset($_SESSION["gameCounter"]) && $_SESSION["gameCounter"] == 4) {
+            $url = url("/yatzy/firstRoll");
+            $url2 = url("/yatzy/destroy");
+            $gameOver = gameOver();
+            if ($gameOver > 5) {
+                $rounds = unserialize($_SESSION['rounds']);
+                $diceRolls = $rounds->getRoundHand();
+                $data = [
+                    "header" => "Yatzy page",
+                    "message" => "Game Over",
+                    "dice" => $diceRolls,
+                    "form" => "<a href=$url2>New Game</a>",
+                    "url" => $url
+                ];
+            }
+        } else {
+            $data = [
+                "header" => "Yatzy page",
+                "message" => "YATZY!.",
+                "rollDice" => "<a href=$url>Roll</a>"
+            ];
+        }
 
         $body = renderView("layout/yatzy.php", $data);
 
@@ -56,6 +73,8 @@ class YatzyView
                 <input type='checkbox' name='amount5' value='4'> Roll Dice 5<br>
                 <input type='submit' name='submit' value='Roll'/>";
 
+        $hold = "<input type='submit' name='reset' value='Hold'/>";
+
         $url = url("/yatzy/roll");
 
         $data = [
@@ -63,6 +82,7 @@ class YatzyView
             "message" => "A ROLL WAS MADE",
             "dice" => $_SESSION["testing"],
             "form" => $form,
+            "hold" => $hold,
             "url" => $url
         ];
 
@@ -73,8 +93,12 @@ class YatzyView
 
     public function reRoll(): ResponseInterface
     {
-
         $_SESSION["gameCounter"] += 1;
+        $holdStatus = $_POST["reset"] ?? null;
+        if ($holdStatus == "Hold") {
+            $_SESSION["gameCounter"] = 4;
+        }
+
         $dice1 = $_POST["amount1"] ?? null;
         $dice2 = $_POST["amount2"] ?? null;
         $dice3 = $_POST["amount3"] ?? null;
@@ -93,27 +117,49 @@ class YatzyView
                 <input type='checkbox' name='amount5' value='4'> Roll Dice 5<br>
                 <input type='submit' name='submit' value='Roll'>";
 
+        $hold = "<input type='submit' name='reset' value='Hold'/>";
+
         $data = [
             "header" => "Yatzy page",
             "message" => "Re-rolled",
             "dice" => $_SESSION["testing2"],
             "form" => $form,
+            "hold" => $hold,
             "url" => $url
         ];
         if ($_SESSION["gameCounter"] == 4) {
-            $url = url("/yatzy");
+            $url = url("/yatzy/firstRoll");
+            $url2 = url("/yatzy/destroy");
             $gameOver = gameOver();
-            $data = [
-                "header" => "Yatzy page",
-                "message" => "Game Over",
-                "dice" => $gameOver,
-                "form" => null,
-                "url" => $url
-            ];
+            if ($gameOver > 5) {
+                $rounds = unserialize($_SESSION['rounds']);
+                $diceRolls = $rounds->getRoundHand();
+                $data = [
+                    "header" => "Yatzy page",
+                    "message" => "Game Over",
+                    "dice" => $diceRolls,
+                    "form" => "<a href=$url2>New Game</a>",
+                    "url" => $url
+                ];
+            } else {
+                $data = [
+                    "header" => "Yatzy page",
+                    "message" => "Game Over",
+                    "dice" => $gameOver,
+                    "form" => "<a href=$url>Roll</a>",
+                    "url" => $url
+                ];
+            }
         }
 
 
         $body = renderView("layout/yatzy.php", $data);
         return $this->response($body);
+    }
+
+    public function destroy(): ResponseInterface
+    {
+        destroySession();
+        return $this->redirect(url("/yatzy"));
     }
 }

@@ -269,11 +269,14 @@ function objectCreator()
 {
     $die = new Dice();
     $dice = new DiceGraphic();
-    //$rounds = new Rounds();
     $diceHand = new DiceHand(4);
     $_SESSION['diceHand'] = serialize($diceHand);
     $_SESSION['die'] = serialize($die);
     $_SESSION['dice'] = serialize($dice);
+    if (!isset($_SESSION['rounds'])){
+        $rounds = new Rounds();
+        $_SESSION['rounds'] = serialize($rounds);
+    }
 }
 
 function yatzy($givenOption = "none", $reRollDice = null): void
@@ -300,6 +303,12 @@ function gameOver()
     unserialize($_SESSION['die']);
     unserialize($_SESSION['dice']);
     $diceHand = unserialize($_SESSION['diceHand']);
-    $sum = $diceHand->getSum();
+    $rounds = unserialize($_SESSION['rounds']);
+    if ($rounds->rolledRounds() < 6) {
+        $rounds->addRound(1);
+        $rounds->addRoundHand($diceHand->printRoll());
+    }
+    $sum = $rounds->rolledRounds();
+    $_SESSION['rounds'] = serialize($rounds);
     return $sum;
 }

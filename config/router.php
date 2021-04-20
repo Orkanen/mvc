@@ -36,7 +36,7 @@ $router->addGroup("/dice", function (RouteCollector $router) {
 
 $router->addGroup("/yatzy", function (RouteCollector $router) {
     $router->addRoute("GET", "", ["\Fian\Controller\YatzyView", "index"]);
-    //$router->addRoute("POST", "/roll", ["\Fian\Controller\YatzyView", "reRoll"]);
+    $router->addRoute("GET", "/destroy", ["\Fian\Controller\YatzyView", "destroy"]);
     $router->addRoute("GET", "/firstRoll", ["\Fian\Controller\YatzyView", "firstRoll"]);
     $router->addRoute("POST", "/firstRoll", ["\Fian\Controller\YatzyView", "reRoll"]);
 });

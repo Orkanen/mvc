@@ -20,7 +20,7 @@ class Rounds
 {
     private array $dices;
     private int $sum = 0;
-    //private int $amount = 0;
+    private string $roundHand = "";
     private int $roundsDone = 0;
 
     public function __construct()
@@ -51,6 +51,16 @@ class Rounds
     public function addRound(int $adding = 0)
     {
         $this->roundsDone += $adding;
+    }
+
+    public function addRoundHand(string $adding = "")
+    {
+        $this->roundHand .= $adding;
+    }
+
+    public function getRoundHand()
+    {
+        return $this->roundHand;
     }
 
     public function rolledRounds()

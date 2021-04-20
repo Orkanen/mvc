@@ -10,6 +10,7 @@ use function Fian\Functions\url;
 
 $header = $header ?? null;
 $message = $message ?? null;
+$hold = $hold ?? null;
 //$url = url("/yatzy/firstRoll");
 ?><h1><?= $header ?></h1>
 
@@ -29,4 +30,8 @@ $message = $message ?? null;
 
     </fieldset>
 
+</form>
+
+<form action="<?= $url; ?>" method="post">
+    <p><?= $hold ?></p>
 </form>
