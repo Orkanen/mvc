@@ -69,6 +69,7 @@ class DiceHand
         return $this->sum;
     }
 
+/*
     public function getDiceHand(): string
     {
         $res = "";
@@ -77,7 +78,7 @@ class DiceHand
         }
         return $res;
     }
-
+*/
     public function printRoll(): string
     {
         $res = "<p class='dice-utf8'>";

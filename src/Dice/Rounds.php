@@ -36,9 +36,6 @@ class Rounds
     public function curRoll(int $human = 0)
     {
         for ($this->sum; $this->sum <= $human;) {
-            if ($this->sum >= 21) {
-                break;
-            }
             $this->sum += $this->dices[0]->roll();
         };
     }

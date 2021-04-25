@@ -221,10 +221,11 @@ function happySession($message): void
 
     if ($message === "dice1") {
         $diceHand = new DiceHand(0);
+        $testFunc = $_SESSION["currentRoll"] ?? 0;
         $diceHand->roll();
         $_SESSION["currentRoll"] = $diceHand->getSum() + ($_SESSION["currentRoll"] ?? 0);
         $_SESSION["flashmessage"] = $diceHand->printRoll();
-        if ($_SESSION["currentRoll"] == 21) {
+        if ($_SESSION["currentRoll"] == 21 || $testFunc == 21) {
             $_SESSION["manWin"] = 1 + ($_SESSION["manWin"] ?? 0);
             $_SESSION["status"] = "You Won!";
             $_SESSION["currentRoll"] = 0;
@@ -235,10 +236,11 @@ function happySession($message): void
         }
     } elseif ($message === "dice2") {
         $diceHand = new DiceHand(1);
+        $testFunc = $_SESSION["currentRoll"] ?? 0;
         $diceHand->roll();
         $_SESSION["currentRoll"] = $diceHand->getSum() + ($_SESSION["currentRoll"] ?? 0);
         $_SESSION["flashmessage"] = $diceHand->printRoll();
-        if ($_SESSION["currentRoll"] == 21) {
+        if ($_SESSION["currentRoll"] == 21 || $testFunc == 21) {
             $_SESSION["manWin"] = 1 + ($_SESSION["manWin"] ?? 0);
             $_SESSION["status"] = "You Won!";
             $_SESSION["currentRoll"] = 0;
@@ -249,18 +251,18 @@ function happySession($message): void
         }
     } elseif ($message === "stop") {
         $roboHand = new Rounds();
-        $temp = $_SESSION["currentRoll"];
+        $temp = $_SESSION["currentRoll"] ?? 0;
         $roboHand->curRoll($temp);
         $moreAndLess = ($roboHand->roboSum() > $temp && $roboHand->roboSum() <= 21);
-        if ($roboHand->roboSum() == 21 || $moreAndLess) {
-            $_SESSION["status"] = "Computer Won!";
-            $_SESSION["roboSum"] = $roboHand->roboSum();
-            $_SESSION["compWin"] = 1 + ($_SESSION["compWin"] ?? 0);
-            $_SESSION["currentRoll"] = 0;
-        } elseif ($roboHand->roboSum() > 21) {
+        if ($roboHand->roboSum() > 21 || $temp == 21) {
             $_SESSION["status"] = "You Won!";
             $_SESSION["roboSum"] = $roboHand->roboSum();
             $_SESSION["manWin"] = 1 + ($_SESSION["manWin"] ?? 0);
+            $_SESSION["currentRoll"] = 0;
+        } elseif ($moreAndLess) {
+            $_SESSION["status"] = "Computer Won!";
+            $_SESSION["roboSum"] = $roboHand->roboSum();
+            $_SESSION["compWin"] = 1 + ($_SESSION["compWin"] ?? 0);
             $_SESSION["currentRoll"] = 0;
         }
     }

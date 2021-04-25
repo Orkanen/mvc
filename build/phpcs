@@ -10,18 +10,22 @@ PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
 
 
 FILE: C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\Dice\Dice.php
-----------------------------------------------------------------------
-FOUND 1 ERROR AFFECTING 1 LINE
-----------------------------------------------------------------------
- 48 | ERROR | Each class must be in a file by itself
-----------------------------------------------------------------------
+--------------------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 2 LINES
+--------------------------------------------------------------------------------
+ 47 | ERROR | [x] The closing brace for the class must go on the next line
+    |       |     after the body
+ 49 | ERROR | [ ] Each class must be in a file by itself
+--------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+--------------------------------------------------------------------------------
 
 
 FILE: C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php
 --------------------------------------------------------------------------
 FOUND 1 ERROR AFFECTING 1 LINE
 --------------------------------------------------------------------------
- 277 | ERROR | [x] Expected 1 space(s) after closing parenthesis; found 0
+ 279 | ERROR | [x] Expected 1 space(s) after closing parenthesis; found 0
 --------------------------------------------------------------------------
 PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
 --------------------------------------------------------------------------
@@ -31,15 +35,16 @@ FILE: ...:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\test\Function\FunctionsTest.
 --------------------------------------------------------------------------------
 FOUND 5 ERRORS AFFECTING 4 LINES
 --------------------------------------------------------------------------------
- 116 | ERROR | [x] Expected 1 space(s) after IF keyword; 0 found
- 151 | ERROR | [x] Expected 1 space(s) after WHILE keyword; 0 found
- 160 | ERROR | [x] Function closing brace must go on the next line following
+ 120 | ERROR | [x] Expected 1 space(s) after IF keyword; 0 found
+ 167 | ERROR | [x] Function closing brace must go on the next line following
      |       |     the body; found 1 blank lines before brace
- 162 | ERROR | [ ] Expected "function abc(...)"; found "function  abc(...)"
- 162 | ERROR | [x] Expected 1 space after FUNCTION keyword; 2 found
+ 169 | ERROR | [ ] Expected "function abc(...)"; found "function  abc(...)"
+ 169 | ERROR | [x] Expected 1 space after FUNCTION keyword; 2 found
+ 226 | ERROR | [x] Function closing brace must go on the next line following
+     |       |     the body; found 1 blank lines before brace
 --------------------------------------------------------------------------------
 PHPCBF CAN FIX THE 4 MARKED SNIFF VIOLATIONS AUTOMATICALLY
 --------------------------------------------------------------------------------
 
-Time: 966ms; Memory: 8MB
+Time: 900ms; Memory: 8MB
 
