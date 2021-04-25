@@ -27,16 +27,6 @@ PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
 --------------------------------------------------------------------------
 
 
-FILE: C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\Guess\Guess.php
-----------------------------------------------------------------------
-FOUND 1 ERROR AFFECTING 1 LINE
-----------------------------------------------------------------------
- 80 | ERROR | [x] Whitespace found at end of line
-----------------------------------------------------------------------
-PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
-----------------------------------------------------------------------
-
-
 FILE: ...:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\test\Function\FunctionsTest.php
 --------------------------------------------------------------------------------
 FOUND 5 ERRORS AFFECTING 4 LINES
@@ -51,5 +41,5 @@ FOUND 5 ERRORS AFFECTING 4 LINES
 PHPCBF CAN FIX THE 4 MARKED SNIFF VIOLATIONS AUTOMATICALLY
 --------------------------------------------------------------------------------
 
-Time: 883ms; Memory: 8MB
+Time: 966ms; Memory: 8MB
 

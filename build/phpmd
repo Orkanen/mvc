@@ -1,7 +1,6 @@
 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\Controller\Debug.php:24	Avoid using static access to class '\Nyholm\Psr7\Stream' in method '__invoke'.
 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\Controller\YatzyView.php:47	The method index uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\Controller\YatzyView.php:145	The method reRoll uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
-C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\Router\Router.php:22	The method dispatch() has a Cyclomatic Complexity of 19. The configured cyclomatic complexity threshold is 10.
 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php:217	The function happySession() has a Cyclomatic Complexity of 12. The configured cyclomatic complexity threshold is 10.
 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\test\Function\FunctionsTest.php:12	The class FunctionsTest has 11 public methods. Consider refactoring FunctionsTest to keep number of public methods under 10.
 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\test\Function\FunctionsTest.php:118	The method testHappySession uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.

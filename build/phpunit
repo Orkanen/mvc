@@ -2,7 +2,7 @@ PHPUnit 9.5.4 by Sebastian Bergmann and contributors.
 
 ..E.EEEEE.E.E.EE..E..EEEE....                                     29 / 29 (100%)
 
-Time: 00:01.133, Memory: 22.00 MB
+Time: 00:01.197, Memory: 22.00 MB
 
 There were 15 errors:
 
@@ -26,7 +26,7 @@ Stack trace:
 #2 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php(128): Fian\Functions\getBaseUrl()
 #3 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\view\header.php(16): Fian\Functions\url('/favicon.ico')
 #4 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\view\layout\debug.php(9): require('C:\\Users\\Orkane...')
-#5 C:\cygwin64\tmp\PHPC233.tmp(479): require_once('C:\\Users\\Orkane...')
+#5 C:\cygwin64\tmp\PHP550C.tmp(479): require_once('C:\\Users\\Orkane...')
 #6 {main}
   thrown in C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php on line 181
 
@@ -38,7 +38,7 @@ Stack trace:
 #2 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php(128): Fian\Functions\getBaseUrl()
 #3 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\view\header.php(16): Fian\Functions\url('/favicon.ico')
 #4 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\view\layout\debug.php(9): require('C:\\Users\\Orkane...')
-#5 C:\cygwin64\tmp\PHPC293.tmp(479): require_once('C:\\Users\\Orkane...')
+#5 C:\cygwin64\tmp\PHP557C.tmp(479): require_once('C:\\Users\\Orkane...')
 #6 {main}
   thrown in C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php on line 181
 
@@ -55,7 +55,7 @@ Stack trace:
 #2 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php(128): Fian\Functions\getBaseUrl()
 #3 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\view\header.php(16): Fian\Functions\url('/favicon.ico')
 #4 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\view\layout\debug.php(9): require('C:\\Users\\Orkane...')
-#5 C:\cygwin64\tmp\PHPC331.tmp(479): require_once('C:\\Users\\Orkane...')
+#5 C:\cygwin64\tmp\PHP55EB.tmp(479): require_once('C:\\Users\\Orkane...')
 #6 {main}
   thrown in C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php on line 181
 
@@ -67,7 +67,7 @@ Stack trace:
 #2 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php(128): Fian\Functions\getBaseUrl()
 #3 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\view\header.php(16): Fian\Functions\url('/favicon.ico')
 #4 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\view\layout\debug.php(9): require('C:\\Users\\Orkane...')
-#5 C:\cygwin64\tmp\PHPC3B0.tmp(479): require_once('C:\\Users\\Orkane...')
+#5 C:\cygwin64\tmp\PHP566A.tmp(479): require_once('C:\\Users\\Orkane...')
 #6 {main}
   thrown in C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php on line 181
 
@@ -103,7 +103,7 @@ Stack trace:
 #2 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php(128): Fian\Functions\getBaseUrl()
 #3 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\view\header.php(16): Fian\Functions\url('/favicon.ico')
 #4 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\view\layout\debug.php(9): require('C:\\Users\\Orkane...')
-#5 C:\cygwin64\tmp\PHPC45E.tmp(479): require_once('C:\\Users\\Orkane...')
+#5 C:\cygwin64\tmp\PHP5708.tmp(479): require_once('C:\\Users\\Orkane...')
 #6 {main}
   thrown in C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php on line 181
 
@@ -115,7 +115,7 @@ Stack trace:
 #2 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php(128): Fian\Functions\getBaseUrl()
 #3 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\view\header.php(16): Fian\Functions\url('/favicon.ico')
 #4 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\view\layout\debug.php(9): require('C:\\Users\\Orkane...')
-#5 C:\cygwin64\tmp\PHPC4BE.tmp(479): require_once('C:\\Users\\Orkane...')
+#5 C:\cygwin64\tmp\PHP5768.tmp(479): require_once('C:\\Users\\Orkane...')
 #6 {main}
   thrown in C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php on line 181
 
@@ -154,13 +154,13 @@ Stack trace:
 #2 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php(128): Fian\Functions\getBaseUrl()
 #3 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\view\header.php(16): Fian\Functions\url('/favicon.ico')
 #4 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\view\layout\debug.php(9): require('C:\\Users\\Orkane...')
-#5 C:\cygwin64\tmp\PHPC57B.tmp(479): require_once('C:\\Users\\Orkane...')
+#5 C:\cygwin64\tmp\PHP5874.tmp(479): require_once('C:\\Users\\Orkane...')
 #6 {main}
   thrown in C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php on line 181
 
 ERRORS!
 Tests: 29, Assertions: 33, Errors: 15.
 
-Generating code coverage report in Clover XML format ... done [00:00.128]
+Generating code coverage report in Clover XML format ... done [00:00.078]
 
-Generating code coverage report in HTML format ... done [00:00.166]
+Generating code coverage report in HTML format ... done [00:00.155]
