@@ -21,11 +21,10 @@ use Fian\Dice\DiceGraphic;
 use Fian\Dice\Rounds;
 
 require __DIR__ . "/flashmessage.php";
-var_dump($_SESSION["object"] ?? null);
+
 $testing = ($_SESSION["object"] ?? null);
 if ($testing != null) {
     $rollValue = $testing->roll();
-    var_dump($rollValue);
 }
 
 ?>

@@ -251,7 +251,8 @@ function happySession($message): void
         $roboHand = new Rounds();
         $temp = $_SESSION["currentRoll"];
         $roboHand->curRoll($temp);
-        if ($roboHand->roboSum() == 21) {
+        $moreAndLess = ($roboHand->roboSum() > $temp && $roboHand->roboSum() <= 21);
+        if ($roboHand->roboSum() == 21 || $moreAndLess) {
             $_SESSION["status"] = "Computer Won!";
             $_SESSION["roboSum"] = $roboHand->roboSum();
             $_SESSION["compWin"] = 1 + ($_SESSION["compWin"] ?? 0);

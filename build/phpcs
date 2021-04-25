@@ -1,10 +1,55 @@
 
-FILE: C:\Users\Orkanen\dbwebb-kurser\mvc\me\game\src\Dice\Dice.php
+FILE: C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\Controller\YatzyView.php
+------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+------------------------------------------------------------------------------
+ 30 | ERROR | [x] Spaces must be used to indent lines; tabs are not allowed
+------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+------------------------------------------------------------------------------
+
+
+FILE: C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\Dice\Dice.php
 ----------------------------------------------------------------------
 FOUND 1 ERROR AFFECTING 1 LINE
 ----------------------------------------------------------------------
  48 | ERROR | Each class must be in a file by itself
 ----------------------------------------------------------------------
 
-Time: 521ms; Memory: 8MB
+
+FILE: C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php
+--------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+--------------------------------------------------------------------------
+ 277 | ERROR | [x] Expected 1 space(s) after closing parenthesis; found 0
+--------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+--------------------------------------------------------------------------
+
+
+FILE: C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\Guess\Guess.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 80 | ERROR | [x] Whitespace found at end of line
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: ...:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\test\Function\FunctionsTest.php
+--------------------------------------------------------------------------------
+FOUND 5 ERRORS AFFECTING 4 LINES
+--------------------------------------------------------------------------------
+ 116 | ERROR | [x] Expected 1 space(s) after IF keyword; 0 found
+ 151 | ERROR | [x] Expected 1 space(s) after WHILE keyword; 0 found
+ 160 | ERROR | [x] Function closing brace must go on the next line following
+     |       |     the body; found 1 blank lines before brace
+ 162 | ERROR | [ ] Expected "function abc(...)"; found "function  abc(...)"
+ 162 | ERROR | [x] Expected 1 space after FUNCTION keyword; 2 found
+--------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 4 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+--------------------------------------------------------------------------------
+
+Time: 883ms; Memory: 8MB
 

@@ -11,7 +11,7 @@ use function Fian\Functions\url;
 $header = $header ?? null;
 $message = $message ?? null;
 $hold = $hold ?? null;
-//$url = url("/yatzy/firstRoll");
+$url = url("/yatzy/firstRoll");
 ?><h1><?= $header ?></h1>
 
 <p><?= $message ?></p>
