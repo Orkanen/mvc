@@ -27,7 +27,7 @@ class YatzyView
 
     public function index(): ResponseInterface
     {
-    	$data = null;
+        $data = null;
         $url = url("/yatzy/firstRoll");
         if (isset($_SESSION["gameCounter"]) && $_SESSION["gameCounter"] == 4) {
             $url = url("/yatzy/firstRoll");

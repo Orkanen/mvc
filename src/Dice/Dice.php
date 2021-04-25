@@ -43,7 +43,6 @@ class Dice
     {
         return $this->faces;
     }
-
 }
 
 class DiceGraphic extends Dice

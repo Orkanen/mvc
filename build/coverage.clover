@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1619348250">
-  <project timestamp="1619348250">
+<coverage generated="1619351534">
+  <project timestamp="1619351534">
     <file name="C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\config\bootstrap.php">
       <line num="10" type="stmt" count="1"/>
       <line num="11" type="stmt" count="1"/>
@@ -266,9 +266,9 @@
       <line num="40" type="stmt" count="1"/>
       <line num="42" type="method" name="getFaces" visibility="public" complexity="1" crap="1" count="1"/>
       <line num="44" type="stmt" count="1"/>
-      <line num="51" type="method" name="graphic" visibility="public" complexity="1" crap="1" count="3"/>
-      <line num="53" type="stmt" count="3"/>
-      <metrics loc="55" ncloc="44" classes="2" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="12" coveredelements="12"/>
+      <line num="50" type="method" name="graphic" visibility="public" complexity="1" crap="1" count="3"/>
+      <line num="52" type="stmt" count="3"/>
+      <metrics loc="54" ncloc="43" classes="2" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="12" coveredelements="12"/>
     </file>
     <file name="C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\Dice\DiceHand.php">
       <class name="Fian\Dice\DiceHand" namespace="global">
@@ -476,6 +476,6 @@
       <line num="316" type="stmt" count="1"/>
       <metrics loc="317" ncloc="256" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="140" coveredstatements="92" elements="140" coveredelements="92"/>
     </file>
-    <metrics files="16" loc="1088" ncloc="935" classes="14" methods="37" coveredmethods="20" conditionals="0" coveredconditionals="0" statements="348" coveredstatements="144" elements="385" coveredelements="164"/>
+    <metrics files="16" loc="1087" ncloc="934" classes="14" methods="37" coveredmethods="20" conditionals="0" coveredconditionals="0" statements="348" coveredstatements="144" elements="385" coveredelements="164"/>
   </project>
 </coverage>

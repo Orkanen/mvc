@@ -117,7 +117,7 @@ class FunctionsTest extends TestCase
         };
         happySession("stop");
 
-        if($_SESSION["status"] == "You Won!") {
+        if ($_SESSION["status"] == "You Won!") {
             $result = "You Won!";
         } else {
             $result = "Computer Won!";
@@ -163,10 +163,9 @@ class FunctionsTest extends TestCase
         $this->assertEquals("You Won!", $_SESSION["status"]);
         $this->assertGreaterThan(0, $_SESSION["manWin"]);
         $this->assertEquals(0, $_SESSION["currentRoll"]);
-
     }
 
-    public function  testObjectCreator()
+    public function testObjectCreator()
     {
         objectCreator();
         $result1 = unserialize($_SESSION['die']);
@@ -222,7 +221,6 @@ class FunctionsTest extends TestCase
         $diceHand->roll();
 
         $this->assertIsString($diceHand->getLastRoll());
-
     }
 
     public function testRounds()

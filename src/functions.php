@@ -276,7 +276,7 @@ function objectCreator()
     $_SESSION['diceHand'] = serialize($diceHand);
     $_SESSION['die'] = serialize($die);
     $_SESSION['dice'] = serialize($dice);
-    if (!isset($_SESSION['rounds'])){
+    if (!isset($_SESSION['rounds'])) {
         $rounds = new Rounds();
         $_SESSION['rounds'] = serialize($rounds);
     }

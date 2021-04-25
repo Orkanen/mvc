@@ -1,10 +1,10 @@
 PHPUnit 9.5.4 by Sebastian Bergmann and contributors.
 
-..E.EEEEE.E.E.EE..E..EEEE.......                                  32 / 32 (100%)
+..E.EEEEE.E.E.EE...EE..EEEE.......                                34 / 34 (100%)
 
-Time: 00:01.062, Memory: 22.00 MB
+Time: 00:01.003, Memory: 22.00 MB
 
-There were 15 errors:
+There were 16 errors:
 
 1) Fian\Controller\ControllerDebugTest::testControllerReturnsResponse
 Undefined index: REQUEST_SCHEME
@@ -26,7 +26,7 @@ Stack trace:
 #2 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php(128): Fian\Functions\getBaseUrl()
 #3 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\view\header.php(16): Fian\Functions\url('/favicon.ico')
 #4 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\view\layout\debug.php(9): require('C:\\Users\\Orkane...')
-#5 C:\cygwin64\tmp\PHP9EBC.tmp(479): require_once('C:\\Users\\Orkane...')
+#5 C:\cygwin64\tmp\PHPB975.tmp(480): require_once('C:\\Users\\Orkane...')
 #6 {main}
   thrown in C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php on line 181
 
@@ -38,7 +38,7 @@ Stack trace:
 #2 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php(128): Fian\Functions\getBaseUrl()
 #3 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\view\header.php(16): Fian\Functions\url('/favicon.ico')
 #4 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\view\layout\debug.php(9): require('C:\\Users\\Orkane...')
-#5 C:\cygwin64\tmp\PHP9F1C.tmp(479): require_once('C:\\Users\\Orkane...')
+#5 C:\cygwin64\tmp\PHPB9E4.tmp(480): require_once('C:\\Users\\Orkane...')
 #6 {main}
   thrown in C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php on line 181
 
@@ -55,7 +55,7 @@ Stack trace:
 #2 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php(128): Fian\Functions\getBaseUrl()
 #3 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\view\header.php(16): Fian\Functions\url('/favicon.ico')
 #4 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\view\layout\debug.php(9): require('C:\\Users\\Orkane...')
-#5 C:\cygwin64\tmp\PHP9F8B.tmp(479): require_once('C:\\Users\\Orkane...')
+#5 C:\cygwin64\tmp\PHPBA44.tmp(480): require_once('C:\\Users\\Orkane...')
 #6 {main}
   thrown in C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php on line 181
 
@@ -67,7 +67,7 @@ Stack trace:
 #2 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php(128): Fian\Functions\getBaseUrl()
 #3 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\view\header.php(16): Fian\Functions\url('/favicon.ico')
 #4 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\view\layout\debug.php(9): require('C:\\Users\\Orkane...')
-#5 C:\cygwin64\tmp\PHPA00A.tmp(479): require_once('C:\\Users\\Orkane...')
+#5 C:\cygwin64\tmp\PHPBAA4.tmp(480): require_once('C:\\Users\\Orkane...')
 #6 {main}
   thrown in C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php on line 181
 
@@ -103,7 +103,7 @@ Stack trace:
 #2 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php(128): Fian\Functions\getBaseUrl()
 #3 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\view\header.php(16): Fian\Functions\url('/favicon.ico')
 #4 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\view\layout\debug.php(9): require('C:\\Users\\Orkane...')
-#5 C:\cygwin64\tmp\PHPA0A9.tmp(479): require_once('C:\\Users\\Orkane...')
+#5 C:\cygwin64\tmp\PHPBB32.tmp(480): require_once('C:\\Users\\Orkane...')
 #6 {main}
   thrown in C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php on line 181
 
@@ -115,17 +115,26 @@ Stack trace:
 #2 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php(128): Fian\Functions\getBaseUrl()
 #3 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\view\header.php(16): Fian\Functions\url('/favicon.ico')
 #4 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\view\layout\debug.php(9): require('C:\\Users\\Orkane...')
-#5 C:\cygwin64\tmp\PHPA108.tmp(479): require_once('C:\\Users\\Orkane...')
+#5 C:\cygwin64\tmp\PHPBB92.tmp(480): require_once('C:\\Users\\Orkane...')
 #6 {main}
   thrown in C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php on line 181
 
-11) Fian\Functions\FunctionsTest::testGetRoutePath
+11) Fian\Controller\ControllerYatzyViewTest::testControllerReturnsResponse
+Undefined index: REQUEST_SCHEME
+
+C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php:171
+C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php:150
+C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php:128
+C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\Controller\YatzyView.php:31
+C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\test\Controller\ControllerYatzyTest.php:32
+
+12) Fian\Functions\FunctionsTest::testGetRoutePath
 Undefined index: REQUEST_URI
 
 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php:27
 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\test\Function\FunctionsTest.php:23
 
-12) Fian\Functions\FunctionsTest::testUrl
+13) Fian\Functions\FunctionsTest::testUrl
 Undefined index: REQUEST_SCHEME
 
 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php:171
@@ -133,20 +142,20 @@ C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php:150
 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php:128
 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\test\Function\FunctionsTest.php:56
 
-13) Fian\Functions\FunctionsTest::testGetBaseUrl
+14) Fian\Functions\FunctionsTest::testGetBaseUrl
 Undefined index: REQUEST_SCHEME
 
 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php:171
 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php:150
 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\test\Function\FunctionsTest.php:67
 
-14) Fian\Functions\FunctionsTest::testGetCurrentUrl
+15) Fian\Functions\FunctionsTest::testGetCurrentUrl
 Undefined index: REQUEST_SCHEME
 
 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php:171
 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\test\Function\FunctionsTest.php:78
 
-15) Fian\Functions\FunctionsTest::testDestroySession
+16) Fian\Functions\FunctionsTest::testDestroySession
 PHPUnit\Framework\Exception: PHP Fatal error:  Uncaught TypeError: rawurldecode() expects parameter 1 to be string, null given in C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php:181
 Stack trace:
 #0 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php(181): rawurldecode(NULL)
@@ -154,13 +163,13 @@ Stack trace:
 #2 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php(128): Fian\Functions\getBaseUrl()
 #3 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\view\header.php(16): Fian\Functions\url('/favicon.ico')
 #4 C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\view\layout\debug.php(9): require('C:\\Users\\Orkane...')
-#5 C:\cygwin64\tmp\PHPA1B6.tmp(479): require_once('C:\\Users\\Orkane...')
+#5 C:\cygwin64\tmp\PHPBC40.tmp(480): require_once('C:\\Users\\Orkane...')
 #6 {main}
   thrown in C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php on line 181
 
 ERRORS!
-Tests: 32, Assertions: 44, Errors: 15.
+Tests: 34, Assertions: 45, Errors: 16.
 
-Generating code coverage report in Clover XML format ... done [00:00.083]
+Generating code coverage report in Clover XML format ... done [00:00.048]
 
-Generating code coverage report in HTML format ... done [00:00.166]
+Generating code coverage report in HTML format ... done [00:00.161]
