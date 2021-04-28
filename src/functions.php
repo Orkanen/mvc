@@ -23,12 +23,11 @@ use Fian\Dice\Rounds;
  */
 function getRoutePath(): string
 {
-    $offset = strlen(dirname($_SERVER["SCRIPT_NAME"]));
-    $path   = substr($_SERVER["REQUEST_URI"], $offset);
+    $offset = strlen(dirname($_SERVER["SCRIPT_NAME"] ?? null));
+    $path   = substr($_SERVER["REQUEST_URI"] ?? "", $offset);
 
-    return $path;
+    return $path ? $path : "";
 }
-
 
 
 /**
@@ -54,7 +53,6 @@ function renderView(
 }
 
 
-
 /**
  * Use Twig to render a view and return its rendered content.
  *
@@ -71,13 +69,13 @@ function renderTwigView(
     static $twig = null;
 
     if (is_null($twig)) {
-        $loader = new FilesystemLoader(
-            INSTALL_PATH . "/view/twig"
-        );
-        // $twig = new \Twig\Environment($loader, [
-        //     "cache" => INSTALL_PATH . "/cache/twig",
-        // ]);
-        $twig = new Environment($loader);
+       $loader = new FilesystemLoader(
+           INSTALL_PATH . "/view/twig"
+       );
+       // $twig = new \Twig\Environment($loader, [
+       //     "cache" => INSTALL_PATH . "/cache/twig",
+       // ]);
+       $twig = new Environment($loader);
     }
 
     return $twig->render($template, $data);
@@ -85,33 +83,33 @@ function renderTwigView(
 
 
 
-/**
- * Send a response to the client.
- *
- * @param int    $status   HTTP status code to send to client.
- *
- * @return void
- */
-function sendResponse(string $body, int $status = 200): void
-{
-    http_response_code($status);
-    echo $body;
-}
-
-
-
-/**
- * Redirect to an url.
- *
- * @param string $url where to redirect.
- *
- * @return void
- */
-function redirectTo(string $url): void
-{
-    http_response_code(200);
-    header("Location: $url");
-}
+// /**
+//  * Send a response to the client.
+//  *
+//  * @param int    $status   HTTP status code to send to client.
+//  *
+//  * @return void
+//  */
+// function sendResponse(string $body, int $status = 200): void
+// {
+//     http_response_code($status);
+//     echo $body;
+// }
+//
+//
+//
+// /**
+//  * Redirect to an url.
+//  *
+//  * @param string $url where to redirect.
+//  *
+//  * @return void
+//  */
+// function redirectTo(string $url): void
+// {
+//     http_response_code(200);
+//     header("Location: $url");
+// }
 
 
 
@@ -129,7 +127,6 @@ function url(string $path): string
 }
 
 
-
 /**
  * Get the base url from the request, relative to the htdoc/ directory.
  *
@@ -140,25 +137,26 @@ function getBaseUrl()
     static $baseUrl = null;
 
     if ($baseUrl) {
-        return $baseUrl;
+       return $baseUrl;
     }
 
-    $scriptName = rawurldecode($_SERVER["SCRIPT_NAME"]);
+    $scriptName = rawurldecode($_SERVER["SCRIPT_NAME"] ?? null);
     $path = rtrim(dirname($scriptName), "/");
 
     // Prepare to create baseUrl by using currentUrl
     $parts = parse_url(getCurrentUrl());
 
     // Build the base url from its parts
-    $siteUrl = "{$parts["scheme"]}://{$parts["host"]}"
-        . (isset($parts["port"])
-            ? ":{$parts["port"]}"
-            : "");
+    $siteUrl = ($parts["scheme"] ?? null)
+       . "://"
+       . ($parts["host"] ?? null)
+       . (isset($parts["port"])
+           ? ":{$parts["port"]}"
+           : "");
     $baseUrl = $siteUrl . $path;
 
     return $baseUrl;
 }
-
 
 
 /**
@@ -168,25 +166,24 @@ function getBaseUrl()
  */
 function getCurrentUrl(): string
 {
-    $scheme = $_SERVER["REQUEST_SCHEME"];
-    $server = $_SERVER["SERVER_NAME"];
+    $scheme = $_SERVER["REQUEST_SCHEME"] ?? "";
+    $server = $_SERVER["SERVER_NAME"] ?? "";
 
-    $port  = $_SERVER["SERVER_PORT"];
+    $port  = $_SERVER["SERVER_PORT"] ?? "";
     $port  = ($port === "80")
-        ? ""
-        : (($port === 443 && $_SERVER["HTTPS"] === "on")
-            ? ""
-            : ":" . $port);
+       ? ""
+       : (($port === 443 && ($_SERVER["HTTPS"] ?? null) === "on")
+           ? ""
+           : ":" . $port);
 
-    $uri = rtrim(rawurldecode($_SERVER["REQUEST_URI"]), "/");
+    $uri = rtrim(rawurldecode($_SERVER["REQUEST_URI"] ?? ""), "/");
 
     $url  = htmlspecialchars($scheme) . "://";
     $url .= htmlspecialchars($server)
-        . $port . htmlspecialchars(rawurldecode($uri));
+       . $port . htmlspecialchars(rawurldecode($uri));
 
     return $url;
 }
-
 
 
 /**
@@ -199,16 +196,16 @@ function destroySession(): void
     $_SESSION = [];
 
     if (ini_get("session.use_cookies")) {
-        $params = session_get_cookie_params();
-        setcookie(
-            session_name(),
-            '',
-            time() - 42000,
-            $params["path"],
-            $params["domain"],
-            $params["secure"],
-            $params["httponly"]
-        );
+       $params = session_get_cookie_params();
+       setcookie(
+           session_name(),
+           '',
+           time() - 42000,
+           $params["path"],
+           $params["domain"],
+           $params["secure"],
+           $params["httponly"]
+       );
     }
 
     session_destroy();

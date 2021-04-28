@@ -1,7 +1,7 @@
-C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\Controller\Debug.php:24	Avoid using static access to class '\Nyholm\Psr7\Stream' in method '__invoke'.
-C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\Controller\YatzyView.php:47	The method index uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
-C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\Controller\YatzyView.php:145	The method reRoll uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
-C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\src\functions.php:217	The function happySession() has a Cyclomatic Complexity of 14. The configured cyclomatic complexity threshold is 10.
-C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\test\Function\FunctionsTest.php:16	The class FunctionsTest has 14 public methods. Consider refactoring FunctionsTest to keep number of public methods under 10.
-C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\test\Function\FunctionsTest.php:122	The method testHappySession uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
-C:\Users\Orkanen\dbwebb-kurser\mvc\me\game1\test\Function\FunctionsTest.php:216	Avoid unused local variables such as '$dice'.
+C:\Users\Orkanen\dbwebb-kurser\mvc\me\game\src\Controller\Debug.php:24	Avoid using static access to class '\Nyholm\Psr7\Stream' in method '__invoke'.
+C:\Users\Orkanen\dbwebb-kurser\mvc\me\game\src\Controller\YatzyView.php:47	The method index uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+C:\Users\Orkanen\dbwebb-kurser\mvc\me\game\src\Controller\YatzyView.php:145	The method reRoll uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+C:\Users\Orkanen\dbwebb-kurser\mvc\me\game\src\functions.php:214	The function happySession() has a Cyclomatic Complexity of 14. The configured cyclomatic complexity threshold is 10.
+C:\Users\Orkanen\dbwebb-kurser\mvc\me\game\test\Function\FunctionsTest.php:16	The class FunctionsTest has 14 public methods. Consider refactoring FunctionsTest to keep number of public methods under 10.
+C:\Users\Orkanen\dbwebb-kurser\mvc\me\game\test\Function\FunctionsTest.php:122	The method testHappySession uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+C:\Users\Orkanen\dbwebb-kurser\mvc\me\game\test\Function\FunctionsTest.php:216	Avoid unused local variables such as '$dice'.
