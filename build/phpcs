@@ -9,99 +9,25 @@ FOUND 1 ERROR AFFECTING 1 LINE
 
 FILE: C:\Users\Orkanen\dbwebb-kurser\mvc\me\game\src\functions.php
 --------------------------------------------------------------------------------
-FOUND 47 ERRORS AFFECTING 47 LINES
+FOUND 7 ERRORS AFFECTING 7 LINES
 --------------------------------------------------------------------------------
-  26 | ERROR | [x] Line indented incorrectly; expected at least 4 spaces, found
-     |       |     3
-  27 | ERROR | [x] Line indented incorrectly; expected at least 4 spaces, found
-     |       |     3
-  29 | ERROR | [x] Line indented incorrectly; expected at least 4 spaces, found
-     |       |     3
-  42 | ERROR | [x] Multi-line function declaration not indented correctly;
-     |       |     expected 4 spaces but found 3
-  43 | ERROR | [x] Multi-line function declaration not indented correctly;
-     |       |     expected 4 spaces but found 3
-  45 | ERROR | [x] Line indented incorrectly; expected at least 4 spaces, found
-     |       |     3
-  47 | ERROR | [x] Line indented incorrectly; expected at least 4 spaces, found
-     |       |     3
-  48 | ERROR | [x] Line indented incorrectly; expected at least 4 spaces, found
-     |       |     3
-  49 | ERROR | [x] Line indented incorrectly; expected at least 4 spaces, found
-     |       |     3
-  50 | ERROR | [x] Line indented incorrectly; expected at least 4 spaces, found
-     |       |     3
-  52 | ERROR | [x] Line indented incorrectly; expected at least 4 spaces, found
-     |       |     3
-  65 | ERROR | [x] Multi-line function declaration not indented correctly;
-     |       |     expected 4 spaces but found 3
-  66 | ERROR | [x] Multi-line function declaration not indented correctly;
-     |       |     expected 4 spaces but found 3
-  68 | ERROR | [x] Line indented incorrectly; expected at least 4 spaces, found
-     |       |     3
-  69 | ERROR | [x] Line indented incorrectly; expected at least 4 spaces, found
-     |       |     3
-  71 | ERROR | [x] Line indented incorrectly; expected 4 spaces, found 3
   72 | ERROR | [x] Line indented incorrectly; expected at least 8 spaces, found
      |       |     7
-  74 | ERROR | [x] Line indented incorrectly; expected at least 9 spaces, found
+  74 | ERROR | [x] Line indented incorrectly; expected at least 8 spaces, found
      |       |     7
-  78 | ERROR | [x] Line indented incorrectly; expected at least 9 spaces, found
+  78 | ERROR | [x] Line indented incorrectly; expected at least 8 spaces, found
      |       |     7
-  79 | ERROR | [x] Line indented incorrectly; expected 4 spaces, found 3
-  81 | ERROR | [x] Line indented incorrectly; expected at least 4 spaces, found
-     |       |     3
- 126 | ERROR | [x] Line indented incorrectly; expected at least 4 spaces, found
-     |       |     3
- 137 | ERROR | [x] Line indented incorrectly; expected at least 4 spaces, found
-     |       |     3
- 139 | ERROR | [x] Line indented incorrectly; expected 4 spaces, found 3
  140 | ERROR | [x] Line indented incorrectly; expected at least 8 spaces, found
      |       |     7
- 141 | ERROR | [x] Line indented incorrectly; expected 4 spaces, found 3
- 143 | ERROR | [x] Line indented incorrectly; expected at least 4 spaces, found
-     |       |     3
- 144 | ERROR | [x] Line indented incorrectly; expected at least 4 spaces, found
-     |       |     3
- 147 | ERROR | [x] Line indented incorrectly; expected at least 4 spaces, found
-     |       |     3
- 150 | ERROR | [x] Line indented incorrectly; expected at least 4 spaces, found
-     |       |     3
- 156 | ERROR | [x] Line indented incorrectly; expected at least 4 spaces, found
-     |       |     3
- 158 | ERROR | [x] Line indented incorrectly; expected at least 4 spaces, found
-     |       |     3
- 169 | ERROR | [x] Line indented incorrectly; expected at least 4 spaces, found
-     |       |     3
- 170 | ERROR | [x] Line indented incorrectly; expected at least 4 spaces, found
-     |       |     3
- 172 | ERROR | [x] Line indented incorrectly; expected at least 4 spaces, found
-     |       |     3
- 173 | ERROR | [x] Line indented incorrectly; expected at least 4 spaces, found
-     |       |     3
- 179 | ERROR | [x] Line indented incorrectly; expected at least 4 spaces, found
-     |       |     3
- 181 | ERROR | [x] Line indented incorrectly; expected at least 4 spaces, found
-     |       |     3
- 182 | ERROR | [x] Line indented incorrectly; expected at least 4 spaces, found
-     |       |     3
- 185 | ERROR | [x] Line indented incorrectly; expected at least 4 spaces, found
-     |       |     3
- 196 | ERROR | [x] Line indented incorrectly; expected at least 4 spaces, found
-     |       |     3
- 198 | ERROR | [x] Line indented incorrectly; expected 4 spaces, found 3
  199 | ERROR | [x] Line indented incorrectly; expected at least 8 spaces, found
      |       |     7
  200 | ERROR | [x] Line indented incorrectly; expected at least 8 spaces, found
      |       |     7
- 208 | ERROR | [x] Line indented incorrectly; expected at least 9 spaces, found
+ 208 | ERROR | [x] Line indented incorrectly; expected at least 8 spaces, found
      |       |     7
- 209 | ERROR | [x] Line indented incorrectly; expected 4 spaces, found 3
- 211 | ERROR | [x] Line indented incorrectly; expected at least 4 spaces, found
-     |       |     3
 --------------------------------------------------------------------------------
-PHPCBF CAN FIX THE 47 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+PHPCBF CAN FIX THE 7 MARKED SNIFF VIOLATIONS AUTOMATICALLY
 --------------------------------------------------------------------------------
 
-Time: 1.18 secs; Memory: 8MB
+Time: 1.38 secs; Memory: 8MB
 
